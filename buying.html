@@ -303,15 +303,42 @@
       <h3>Tell me what you're looking for.</h3>
       <p class="contact-lead">Fill this out and I’ll help you map out your next steps.</p>
 
-      <form class="form">
-        <input required placeholder="Name">
-        <input required type="email" placeholder="Email">
-        <input required placeholder="Phone">
-        <textarea required rows="5" placeholder="What are you looking for?"></textarea>
-        <button class="btn">Start My Home Search</button>
-      </form>
-    </div>
-  </section>
+      <form class="form"
+      action="https://formsubmit.co/cmedeiros1130@gmail.com"
+      method="POST">
+
+    <input type="text"
+           name="Name"
+           placeholder="Name"
+           required>
+
+    <input type="email"
+           name="Email"
+           placeholder="Email"
+           required>
+
+    <input type="text"
+           name="Phone"
+           placeholder="Phone"
+           required>
+
+    <textarea
+        name="Message"
+        rows="5"
+        placeholder="What are you looking for?"
+        required></textarea>
+
+    <input type="hidden" name="_subject" value="New Buyer Lead">
+
+    <input type="hidden" name="_captcha" value="false">
+
+    <input type="hidden" name="_template" value="table">
+
+    <button type="submit" class="btn">
+        Start My Home Search
+    </button>
+
+</form>
 
   <section class="section">
     <div class="eyebrow">My Buyer Roadmap</div>
