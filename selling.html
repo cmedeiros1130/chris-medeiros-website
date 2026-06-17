@@ -303,49 +303,23 @@
       <h3>Tell me about your property.</h3>
       <p class="contact-lead">Fill this out and I’ll follow up with next steps.</p>
 
-     <form class="form"
+    <form class="form"
       action="https://formsubmit.co/cmedeiros1130@gmail.com"
       method="POST">
 
-    <input
-        type="text"
-        name="Name"
-        placeholder="Name"
-        required>
+    <input type="text" name="Name" placeholder="Name" required>
+    <input type="email" name="Email" placeholder="Email" required>
+    <input type="text" name="Phone" placeholder="Phone" required>
+    <input type="text" name="PropertyAddress" placeholder="Property Address" required>
 
-    <input
-        type="email"
-        name="Email"
-        placeholder="Email"
-        required>
+    <textarea name="Message" rows="5" placeholder="Tell me about your property" required></textarea>
 
-    <input
-        type="text"
-        name="Property Address"
-        placeholder="Property Address"
-        required>
-
-    <textarea
-        name="Message"
-        rows="5"
-        placeholder="Tell me about your property"
-        required></textarea>
-
-    <!-- Email Settings -->
     <input type="hidden" name="_subject" value="New Seller Lead - Website">
     <input type="hidden" name="_captcha" value="false">
     <input type="hidden" name="_template" value="table">
+    <input type="hidden" name="_next" value="https://cmedeiros1130.github.io/chris-medeiros-website/?submitted=true">
 
-    <!-- Redirect back to website -->
-    <input
-        type="hidden"
-        name="_next"
-        value="https://cmedeiros1130.github.io/chris-medeiros-website/?submitted=true">
-
-    <button type="submit" class="btn">
-        Request Selling Consultation
-    </button>
-
+    <button type="submit" class="btn">Request Selling Consultation</button>
 </form>
     </div>
   </section>
