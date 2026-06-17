@@ -1,13 +1,12 @@
-CHRIS MEDEIROS WEBSITE - PREVIEW + GITHUB PAGES
-
-PREVIEW BEFORE PUBLISHING:
-1. Unzip this folder.
-2. Open index.html in Chrome.
-3. Do NOT open the HTML while it is still inside the ZIP. Extract it first.
-
-GITHUB PAGES:
-Upload every file and the full assets folder to the repository root.
-The website starts from index.html.
-
-FORMS:
-The forms currently use a placeholder Formspree endpoint. Replace YOUR_FORM_ID with your free Formspree form ID when ready.
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Chris Medeiros | RI & MA Realtor</title><link rel="stylesheet" href="styles.css"></head><body><header class="topbar"><div class="wrap topbar-inner"><span>Chris Medeiros | eXp Realty | Slocum Home Team</span><span>401-235-4396 • Chrism@slocumhometeam.com</span></div></header>
+<nav class="nav"><div class="wrap nav-inner"><a class="brand" href="index.html"><strong>Chris Medeiros</strong><small>RI & MA REALTOR</small></a><div class="nav-links"><a class="" href="index.html">Home</a><a class="active" href="buying.html">Buying Process</a><a class="" href="selling.html">Selling Process</a><a class="" href="valuation.html">Home Valuation</a><a class="" href="about.html">About / Contact</a></div></div></nav>
+<section class="page-hero"><div class="wrap"><p class="eyebrow gold">Buying Process</p><h1>Looking to Buy</h1><p>A clear step-by-step path for buying a home in Rhode Island or Massachusetts.</p></div></section>
+<section class="section white"><div class="wrap narrow"><div class="steps">
+<h2>1. Get Pre-Approved</h2><p>Before touring homes, get a strong pre-approval so you understand your budget and can move quickly when the right property hits.</p>
+<h2>2. Choose Representation</h2><p>Your agent helps explain the process, review pricing, protect your interests, and guide your offer strategy.</p>
+<h2>3. Define the Search</h2><p>We narrow down towns, property type, budget, must-haves, and deal breakers so the search stays focused.</p>
+<h2>4. Tour Homes</h2><p>We look beyond the photos and evaluate layout, condition, resale, location, and potential concerns.</p>
+<h2>5. Make an Offer</h2><p>When the right home comes up, we structure the offer with price, terms, deposits, timelines, inspections, and closing date.</p>
+<h2>6. Inspections, Appraisal, and Closing</h2><p>After acceptance, we work through inspections, lender requirements, appraisal, walkthrough, and closing day.</p>
+</div><div class="form-card"><h2>Looking to Buy</h2><form class="form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST"><input name="name" placeholder="Name" required><input type="email" name="email" placeholder="Email" required><input name="phone" placeholder="Phone"><textarea name="message" placeholder="Tell me what you're looking for"></textarea><button class="btn">Send</button></form></div></div></section>
+<footer><div class="wrap footer-grid"><div><h3>Chris Medeiros</h3><p>eXp Realty | Slocum Home Team<br>4372 Post Rd, Warwick, RI 02818</p></div><div><p><strong>Call/Text:</strong> 401-235-4396<br><strong>Email:</strong> Chrism@slocumhometeam.com</p></div></div></footer><script src="script.js"></script></body></html>

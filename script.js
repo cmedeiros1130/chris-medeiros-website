@@ -1,15 +1,19 @@
-const toggle=document.querySelector('.mobile-toggle');
-const nav=document.querySelector('.nav-links');
-if(toggle){toggle.addEventListener('click',()=>nav.classList.toggle('open'));}
-
-document.querySelectorAll('form').forEach(form=>{
-  form.addEventListener('submit',e=>{
-    const msg=form.querySelector('.submit-msg');
-    if(msg){msg.style.display='block';}
-    if(form.classList.contains('valuation-form')){
-      e.preventDefault();
-      const result=form.querySelector('.valuation-result');
-      if(result){result.style.display='block';}
-    }
-  });
-});
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Chris Medeiros | RI & MA Realtor</title><link rel="stylesheet" href="styles.css"></head><body><header class="topbar"><div class="wrap topbar-inner"><span>Chris Medeiros | eXp Realty | Slocum Home Team</span><span>401-235-4396 • Chrism@slocumhometeam.com</span></div></header>
+<nav class="nav"><div class="wrap nav-inner"><a class="brand" href="index.html"><strong>Chris Medeiros</strong><small>RI & MA REALTOR</small></a><div class="nav-links"><a class="active" href="index.html">Home</a><a class="" href="buying.html">Buying Process</a><a class="" href="selling.html">Selling Process</a><a class="" href="valuation.html">Home Valuation</a><a class="" href="about.html">About / Contact</a></div></div></nav>
+<section class="hero">
+  <div class="slides">
+    <div class="slide active" style="background-image:url('assets/images/ri-slide-1.png')"></div>
+    <div class="slide" style="background-image:url('assets/images/ri-slide-2.png')"></div>
+    <div class="slide" style="background-image:url('assets/images/ri-slide-3.png')"></div>
+    <div class="slide" style="background-image:url('assets/images/ri-slide-4.png')"></div>
+  </div>
+  <div class="hero-overlay"></div>
+  <div class="wrap hero-content">
+    <p class="eyebrow">Rhode Island & Massachusetts Real Estate</p>
+    <p class="hero-bio">Faith-driven Realtor with eXp Realty | Slocum Home Team serving Rhode Island and Massachusetts. Clear communication, honest advice, and steady guidance from the first showing to the closing table.</p>
+    <div class="hero-actions"><a class="btn" href="valuation.html">Request Home Value</a><a class="btn ghost" href="about.html#contact">Let's Talk</a></div>
+  </div>
+</section>
+<section class="section white"><div class="wrap"><div class="section-head"><p class="eyebrow blue">Real reviews from real clients</p><h2>Clients trust Chris to guide the process.</h2></div><div class="testimonials three"><article class="testimonial"><div class="stars">★★★★★</div><p>“He is the best I have seen. Very helpful, compassionate, always ready to assist. He was with me all the way. I recommend him to every home buyer.”</p><h3>Olanrewaju</h3><small>Warwick • RealSatisfied</small></article><article class="testimonial"><div class="stars">★★★★★</div><p>“Chris was wonderful to work with! Our journey wasn't the easiest, but Chris was able to manage everything that came our way with such grace. He was reachable at any hour and was extremely helpful in getting answers to any questions we had. Would highly recommend working with him.”</p><h3>Erika Winter</h3><small>Warwick, Rhode Island • RealSatisfied</small></article><article class="testimonial"><div class="stars">★★★★★</div><p>“We live in Washington State to purchase the house in another state is difficult because of the distance and time zones. Chris made the transaction much simpler than we expected. Chris informed us step by step during the process such as finding the inspector, bank connection, and explained RI rules and regulations in detail. We closed the house at the end of February. We are happy to work with Chris and will refer friends and family members to Chris if they are looking for buying a home in RI. Thank you Chris.”</p><h3>Van, Dave and Malcolm</h3><small>Barrington, RI • RealSatisfied</small></article></div></div></section>
+<section class="section"><div class="wrap"><div class="section-head split"><div><p class="eyebrow gold">Recent Sales</p><h2>Highlighted Sales</h2></div><p>Click any property to view it directly on Zillow.</p></div><div class="sales-grid three"><a class="sale-card" href="https://www.zillow.com/homedetails/137-Colonial-Ave-Cranston-RI-02910/65995654_zpid/" target="_blank" rel="noopener"><img src="https://photos.zillowstatic.com/fp/25426f31190d6e926b157b5c0e938cdb-cc_ft_960.jpg" alt="137 Colonial Ave"><div><h3>137 Colonial Ave</h3><p>Cranston, RI</p><span>View on Zillow →</span></div></a><a class="sale-card" href="https://www.zillow.com/homedetails/12-Railroad-Row-Warwick-RI-02886/66047263_zpid/" target="_blank" rel="noopener"><img src="https://photos.zillowstatic.com/fp/bf401881b6d3177ab2783d48c29933a4-cc_ft_960.jpg" alt="12 Railroad Row"><div><h3>12 Railroad Row</h3><p>Warwick, RI</p><span>View on Zillow →</span></div></a><a class="sale-card" href="https://www.zillow.com/homedetails/259-Central-Ave-Johnston-RI-02919/65956077_zpid/" target="_blank" rel="noopener"><img src="https://photos.zillowstatic.com/fp/367dd664b1388a5f562890087ae0ea84-cc_ft_960.jpg" alt="259 Central Ave"><div><h3>259 Central Ave</h3><p>Johnston, RI</p><span>View on Zillow →</span></div></a></div><a class="btn" href="about.html#sales">See More</a></div></section>
+<footer><div class="wrap footer-grid"><div><h3>Chris Medeiros</h3><p>eXp Realty | Slocum Home Team<br>4372 Post Rd, Warwick, RI 02818</p></div><div><p><strong>Call/Text:</strong> 401-235-4396<br><strong>Email:</strong> Chrism@slocumhometeam.com</p></div></div></footer><script src="script.js"></script></body></html>
