@@ -393,24 +393,82 @@
       <h3>Tell me what you're looking to do.</h3>
       <p class="contact-lead">Fill this out and I’ll get back to you as soon as possible.</p>
 
-      <form class="form">
-        <div class="input-row">
-          <input required placeholder="Name">
-          <input required type="email" placeholder="Email">
-        </div>
+      <form class="form"
+      action="https://formsubmit.co/cmedeiros1130@gmail.com"
+      method="POST">
 
-        <input required placeholder="Phone">
+    <div class="input-row">
 
-        <div class="choice-group">
-          <label><input type="radio" name="interest" required><span>Looking to buy</span></label>
-          <label><input type="radio" name="interest" required><span>Looking to sell</span></label>
-          <label><input type="radio" name="interest" required><span>Just curious</span></label>
-        </div>
+        <input
+            type="text"
+            name="Name"
+            placeholder="Name"
+            required>
 
-        <textarea required placeholder="Message" rows="5"></textarea>
+        <input
+            type="email"
+            name="Email"
+            placeholder="Email"
+            required>
 
-        <button class="btn">Submit Request</button>
-      </form>
+    </div>
+
+    <input
+        type="text"
+        name="Phone"
+        placeholder="Phone"
+        required>
+
+    <div class="choice-group">
+
+        <label>
+            <input type="radio"
+                   name="Interest"
+                   value="Looking to Buy"
+                   required>
+            <span>Looking to buy</span>
+        </label>
+
+        <label>
+            <input type="radio"
+                   name="Interest"
+                   value="Looking to Sell"
+                   required>
+            <span>Looking to sell</span>
+        </label>
+
+        <label>
+            <input type="radio"
+                   name="Interest"
+                   value="Just Curious"
+                   required>
+            <span>Just curious</span>
+        </label>
+
+    </div>
+
+    <textarea
+        name="Message"
+        rows="5"
+        placeholder="Message"
+        required></textarea>
+
+    <!-- Email Settings -->
+    <input type="hidden" name="_subject" value="📩 New Contact Form Lead - Website">
+    <input type="hidden" name="_captcha" value="false">
+    <input type="hidden" name="_template" value="table">
+
+    <!-- Redirect -->
+    <input
+        type="hidden"
+        name="_next"
+        value="https://cmedeiros1130.github.io/chris-medeiros-website/?submitted=true">
+
+    <button type="submit" class="btn">
+        Submit Request
+    </button>
+
+</form>
 
       <div class="contact-info">
         <strong>Chris Medeiros</strong>
