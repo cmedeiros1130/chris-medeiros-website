@@ -402,6 +402,15 @@
       Chrism@slocumhometeam.com
     </div>
   </footer>
+      <script>
+const params = new URLSearchParams(window.location.search);
+
+if (params.get("submitted") === "true") {
+    alert("Thank you for your submission! Chris will contact you shortly.");
+
+    window.history.replaceState({}, document.title, window.location.pathname);
+}
+</script>
 
 </body>
 </html>
