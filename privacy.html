@@ -28,6 +28,7 @@ body{
 a{
   color:var(--blue);
   text-decoration:none;
+  font-weight:700;
 }
 
 .top{
@@ -88,8 +89,17 @@ h2{
   margin-top:45px;
 }
 
-ul{
+ul, ol{
   padding-left:22px;
+}
+
+.highlight{
+  background:#f4f8ff;
+  border-left:6px solid var(--blue);
+  padding:18px 22px;
+  border-radius:14px;
+  margin:25px 0;
+  font-weight:700;
 }
 
 .footer{
@@ -100,50 +110,45 @@ ul{
 }
 
 @media(max-width:800px){
+  .top,
+  .nav,
+  .footer{
+    display:block;
+  }
 
-.top,
-.nav,
-.footer{
-display:block;
-}
+  .links{
+    margin-top:15px;
+    flex-wrap:wrap;
+  }
 
-.links{
-margin-top:15px;
-flex-wrap:wrap;
-}
-
-.container{
-margin:30px 5%;
-padding:30px;
-}
-
+  .container{
+    margin:30px 5%;
+    padding:30px;
+  }
 }
 </style>
-
 </head>
 
 <body>
 
 <div class="top">
-<div>Chris Medeiros | eXp Realty | Slocum Home Team</div>
-<div>401-235-4396 • Chrism@slocumhometeam.com</div>
+  <div>Chris Medeiros | eXp Realty | Slocum Home Team</div>
+  <div>401-235-4396 • Chrism@slocumhometeam.com</div>
 </div>
 
 <nav class="nav">
+  <div class="brand">
+    Chris Medeiros
+    <span>RI & MA REALTOR</span>
+  </div>
 
-<div class="brand">
-Chris Medeiros
-<span>RI & MA REALTOR</span>
-</div>
-
-<div class="links">
-<a href="index.html">Home</a>
-<a href="buying.html">Buying</a>
-<a href="selling.html">Selling</a>
-<a href="valuation.html">Home Valuation</a>
-<a href="about.html">About</a>
-</div>
-
+  <div class="links">
+    <a href="index.html">Home</a>
+    <a href="buying.html">Buying</a>
+    <a href="selling.html">Selling</a>
+    <a href="valuation.html">Home Valuation</a>
+    <a href="about.html">About</a>
+  </div>
 </nav>
 
 <div class="container">
@@ -161,11 +166,12 @@ Your privacy is important to us. This Privacy Policy explains how information co
 <p>When you submit a form on this website, we may collect:</p>
 
 <ul>
-<li>Name</li>
-<li>Email Address</li>
-<li>Phone Number</li>
-<li>Property Address</li>
-<li>Information you voluntarily provide</li>
+  <li>Name</li>
+  <li>Email address</li>
+  <li>Phone number</li>
+  <li>Property address</li>
+  <li>Buying, selling, or home valuation information</li>
+  <li>Information you voluntarily provide</li>
 </ul>
 
 <h2>How Your Information Is Used</h2>
@@ -173,82 +179,75 @@ Your privacy is important to us. This Privacy Policy explains how information co
 <p>Your information may be used to:</p>
 
 <ul>
-<li>Respond to your inquiry.</li>
-<li>Provide real estate services.</li>
-<li>Schedule appointments.</li>
-<li>Provide home valuation information.</li>
-<li>Communicate regarding buying or selling real estate.</li>
+  <li>Respond to your inquiry</li>
+  <li>Provide real estate services</li>
+  <li>Schedule appointments</li>
+  <li>Provide home valuation information</li>
+  <li>Communicate regarding buying or selling real estate</li>
+  <li>Send appointment reminders or important service updates</li>
 </ul>
 
-<h2>SMS Communications</h2>
+<div class="highlight">
+  Data will not be sold or shared with third parties for marketing or promotional purposes.
+</div>
+
+<h2>SMS Terms and Conditions</h2>
+
+<ol>
+  <li>
+    We use SMS to confirm appointments, send reminders, and notify clients of schedule updates or important changes related to real estate services.
+  </li>
+
+  <li>
+    You can cancel the SMS service at any time. Just text <strong>STOP</strong>. After you send the SMS message STOP to us, we will send you an SMS message to confirm that you have been unsubscribed. After this, you will no longer receive SMS messages from us. If you want to join again, just sign up as you did the first time, and we will start sending SMS messages to you again.
+  </li>
+
+  <li>
+    If you are experiencing issues with the messaging program, you can reply with the keyword <strong>HELP</strong> for more assistance, or you can get help directly at <strong>Chrism@slocumhometeam.com</strong>.
+  </li>
+
+  <li>
+    Carriers are not liable for delayed or undelivered messages.
+  </li>
+
+  <li>
+    Message and data rates may apply for any messages sent to you from us and to us from you. Message frequency may vary. If you have any questions about your text plan or data plan, it is best to contact your wireless provider.
+  </li>
+
+  <li>
+    If you have any questions regarding privacy, please read this Privacy Policy.
+  </li>
+</ol>
+
+<h2>Opt-In Consent</h2>
 
 <p>
-By providing your phone number and opting in, you consent to receive calls, emails, and SMS messages regarding real estate services.
+By submitting a form on this website and checking the consent box, you agree to be contacted by Chris Medeiros with eXp Realty | Slocum Home Team via call, email, and text for real estate services.
 </p>
 
-<p><strong>We use SMS to:</strong></p>
-
-<ul>
-<li>Confirm appointments.</li>
-<li>Send appointment reminders.</li>
-<li>Provide schedule updates.</li>
-<li>Respond to inquiries.</li>
-<li>Communicate throughout your real estate transaction.</li>
-</ul>
-
-<h2>Opt-Out</h2>
-
 <p>
-You may opt out of SMS messages at any time by replying <strong>STOP</strong>.
-After sending STOP, you will receive one confirmation message and will no longer receive SMS messages unless you opt in again.
-</p>
-
-<h2>Help</h2>
-
-<p>
-Reply <strong>HELP</strong> for assistance or contact:
-</p>
-
-<p>
-
-Chris Medeiros<br>
-401-235-4396<br>
-Chrism@slocumhometeam.com
-
-</p>
-
-<h2>Carrier Disclaimer</h2>
-
-<p>
-Carriers are not liable for delayed or undelivered messages.
-</p>
-
-<h2>Message Rates</h2>
-
-<p>
-Message and data rates may apply. Message frequency may vary depending on your interaction with our services.
+To opt out, reply <strong>STOP</strong> at any time. Reply <strong>HELP</strong> for assistance. Message and data rates may apply. Message frequency may vary.
 </p>
 
 <h2>Information Sharing</h2>
 
 <p>
-<strong>Data will not be sold or shared with third parties for marketing or promotional purposes.</strong>
+We do not sell your personal information, phone number, or SMS consent information.
 </p>
 
 <p>
-Information may be shared only with service providers necessary to operate this website or provide requested real estate services.
+Information may be shared only with trusted service providers necessary to operate this website, respond to inquiries, or provide requested real estate services.
 </p>
 
 <h2>Security</h2>
 
 <p>
-Reasonable safeguards are used to protect the information submitted through this website.
+Reasonable safeguards are used to protect information submitted through this website. However, no online transmission or storage method can be guaranteed to be completely secure.
 </p>
 
 <h2>Contact</h2>
 
 <p>
-
 Chris Medeiros<br>
 eXp Realty | Slocum Home Team<br>
 4372 Post Road<br>
@@ -256,23 +255,16 @@ Warwick, RI 02818<br><br>
 
 Phone: 401-235-4396<br>
 Email: Chrism@slocumhometeam.com
-
 </p>
 
 </div>
 
 <footer class="footer">
-
-<strong>Chris Medeiros</strong><br>
-
-eXp Realty | Slocum Home Team<br>
-
-4372 Post Rd, Warwick, RI 02818<br><br>
-
-401-235-4396<br>
-
-Chrism@slocumhometeam.com
-
+  <strong>Chris Medeiros</strong><br>
+  eXp Realty | Slocum Home Team<br>
+  4372 Post Rd, Warwick, RI 02818<br><br>
+  401-235-4396<br>
+  Chrism@slocumhometeam.com
 </footer>
 
 </body>
