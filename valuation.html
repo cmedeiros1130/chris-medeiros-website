@@ -65,7 +65,30 @@
       font-size:16px;
     }
 
-    .input-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+    .upgrade-grid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:12px;
+      margin:6px 0 16px;
+    }
+
+    .upgrade-grid label{
+      background:#f4f8ff;
+      border:1px solid #d9e7f7;
+      border-radius:14px;
+      padding:13px;
+      display:flex;
+      align-items:center;
+      gap:10px;
+      font-weight:800;
+      color:var(--blue2);
+      cursor:pointer;
+    }
+
+    .upgrade-grid input{
+      width:auto;
+      margin:0;
+    }
 
     .btn{
       width:100%;
@@ -99,7 +122,7 @@
     @media(max-width:850px){
       .top,.nav,.footer{display:block}
       .links{flex-wrap:wrap;margin-top:16px}
-      .valuation-hero,.input-row{grid-template-columns:1fr}
+      .valuation-hero,.upgrade-grid{grid-template-columns:1fr}
       .valuation-hero{padding:55px 6%}
       .valuation-panel{padding:26px}
     }
@@ -128,18 +151,17 @@
       <div class="eyebrow">Home Valuation</div>
       <h2>Thinking about what your home is worth?</h2>
       <p>
-        Get an instant automated starting range based on local Rhode Island and Massachusetts market assumptions.
-        This estimate is not an appraisal or a full CMA, but it gives you a fast starting point before a deeper review.
+        Get an instant automated valuation model using property data, then adjust the estimate based on condition and upgrades.
       </p>
 
       <div class="valuation-points">
         <div>
-          <strong>Instant Starting Range</strong>
-          <span>Generated immediately based on town, size, condition, and basic property details.</span>
+          <strong>Instant AVM</strong>
+          <span>Uses property valuation data first, not just a generic city calculator.</span>
         </div>
         <div>
-          <strong>Local Review Still Matters</strong>
-          <span>Final market value depends on comps, upgrades, layout, condition, and buyer demand.</span>
+          <strong>Upgrade Adjustments</strong>
+          <span>Kitchen, baths, roof, HVAC, basement, and condition can adjust the range.</span>
         </div>
         <div>
           <strong>Chris Will Follow Up</strong>
@@ -151,7 +173,7 @@
     <div class="valuation-panel">
       <div class="eyebrow">Free Estimate</div>
       <h3>Get My Home Value</h3>
-      <p class="lead">Enter the address and a few quick details. The less you know, the estimate will still generate a starting range.</p>
+      <p class="lead">Enter your address, contact info, and any upgrades. Your instant estimate will appear below.</p>
 
       <iframe name="hiddenFrame" style="display:none;"></iframe>
 
@@ -164,43 +186,46 @@
         <input type="text" name="Name" id="name" placeholder="Name" required>
         <input type="email" name="Email" id="email" placeholder="Email" required>
         <input type="text" name="Phone" id="phone" placeholder="Phone">
-
         <input type="text" name="PropertyAddress" id="address" placeholder="Property Address" required>
 
-        <div class="input-row">
-          <input type="number" name="SquareFeet" id="sqft" placeholder="Approx. Square Feet">
-          <input type="number" name="Bedrooms" id="beds" placeholder="Beds">
+        <select name="Condition" id="condition">
+          <option value="average">Average Condition</option>
+          <option value="needs-work">Needs Work</option>
+          <option value="good">Good Condition</option>
+          <option value="updated">Recently Updated</option>
+          <option value="luxury">Luxury / High-End</option>
+        </select>
+
+        <div class="upgrade-grid">
+          <label><input type="checkbox" id="kitchen" name="UpdatedKitchen" value="Yes"> Updated Kitchen</label>
+          <label><input type="checkbox" id="bathrooms" name="UpdatedBathrooms" value="Yes"> Updated Bathrooms</label>
+          <label><input type="checkbox" id="roof" name="NewerRoof" value="Yes"> Newer Roof</label>
+          <label><input type="checkbox" id="hvac" name="NewerHVAC" value="Yes"> Newer HVAC</label>
+          <label><input type="checkbox" id="basement" name="FinishedBasement" value="Yes"> Finished Basement</label>
+          <label><input type="checkbox" id="garage" name="Garage" value="Yes"> Garage</label>
         </div>
 
-        <div class="input-row">
-          <input type="number" name="Bathrooms" id="baths" placeholder="Baths">
-          <select name="Condition" id="condition">
-            <option value="average">Average Condition</option>
-            <option value="needs-work">Needs Work</option>
-            <option value="good">Good Condition</option>
-            <option value="updated">Recently Updated</option>
-            <option value="luxury">Luxury / High-End</option>
-          </select>
-        </div>
+        <textarea name="AdditionalUpgrades" id="upgrades" rows="4" placeholder="Any other upgrades?"></textarea>
 
-        <textarea name="Upgrades" id="upgrades" rows="4" placeholder="Any upgrades? Kitchen, bath, roof, HVAC, finished basement, etc."></textarea>
-
+        <input type="hidden" name="BaseAVM" id="baseAVM">
+        <input type="hidden" name="UpgradeAdjustment" id="upgradeAdjustment">
         <input type="hidden" name="EstimatedValue" id="estimatedValue">
         <input type="hidden" name="EstimatedRange" id="estimatedRange">
+
         <input type="hidden" name="_subject" value="New Home Valuation Lead - Website">
         <input type="hidden" name="_captcha" value="false">
         <input type="hidden" name="_template" value="table">
 
-        <button type="submit" class="btn">Generate My Estimate</button>
+        <button type="button" class="btn" onclick="generateAVM()">Generate My Estimate</button>
       </form>
 
       <div class="result" id="resultBox">
-        <h3>Estimated Starting Value</h3>
+        <h3>Estimated Automated Value</h3>
         <div class="price" id="mainValue">$0</div>
         <div class="range" id="rangeValue">$0 - $0</div>
         <p class="small">
-          This is an automated starting estimate only. Actual market value may change based on recent comparable sales,
-          property condition, upgrades, location, lot size, layout, and current buyer demand. Chris will review your property
+          This is an automated estimate only. Actual market value may change based on recent comparable sales,
+          property condition, upgrades, layout, lot size, location, and current buyer demand. Chris will review your property
           and follow up with a more accurate opinion of value.
         </p>
       </div>
@@ -220,20 +245,7 @@
   </footer>
 
   <script>
-    const cityRates = [
-      { city: "barrington", rate: 385, defaultSqft: 1800 },
-      { city: "bristol", rate: 360, defaultSqft: 1700 },
-      { city: "east greenwich", rate: 350, defaultSqft: 1900 },
-      { city: "north kingstown", rate: 325, defaultSqft: 1800 },
-      { city: "cranston", rate: 285, defaultSqft: 1600 },
-      { city: "warwick", rate: 275, defaultSqft: 1550 },
-      { city: "johnston", rate: 265, defaultSqft: 1500 },
-      { city: "coventry", rate: 255, defaultSqft: 1600 },
-      { city: "providence", rate: 245, defaultSqft: 1500 },
-      { city: "attleboro", rate: 275, defaultSqft: 1550 },
-      { city: "pawtucket", rate: 235, defaultSqft: 1450 },
-      { city: "woonsocket", rate: 205, defaultSqft: 1450 }
-    ];
+    const RENTCAST_API_KEY = "7831e499b9624c36bc0d9d02b724e36c";
 
     function money(num){
       return new Intl.NumberFormat("en-US", {
@@ -243,51 +255,89 @@
       }).format(num);
     }
 
-    function getRate(address){
-      const lower = address.toLowerCase();
-      const found = cityRates.find(item => lower.includes(item.city));
-      return found || { city: "local market", rate: 265, defaultSqft: 1550 };
-    }
+    function getUpgradeAdjustment(base){
+      let adjustment = 0;
 
-    document.getElementById("valuationForm").addEventListener("submit", function(e){
-      e.preventDefault();
+      if(document.getElementById("kitchen").checked) adjustment += base * 0.025;
+      if(document.getElementById("bathrooms").checked) adjustment += base * 0.020;
+      if(document.getElementById("roof").checked) adjustment += base * 0.012;
+      if(document.getElementById("hvac").checked) adjustment += base * 0.010;
+      if(document.getElementById("basement").checked) adjustment += base * 0.025;
+      if(document.getElementById("garage").checked) adjustment += base * 0.012;
 
-      const address = document.getElementById("address").value;
-      const sqftInput = Number(document.getElementById("sqft").value);
-      const beds = Number(document.getElementById("beds").value);
-      const baths = Number(document.getElementById("baths").value);
       const condition = document.getElementById("condition").value;
 
-      const market = getRate(address);
-      let sqft = sqftInput || market.defaultSqft;
-      let estimate = sqft * market.rate;
+      if(condition === "needs-work") adjustment -= base * 0.075;
+      if(condition === "good") adjustment += base * 0.015;
+      if(condition === "updated") adjustment += base * 0.045;
+      if(condition === "luxury") adjustment += base * 0.075;
 
-      if(beds >= 4) estimate += 25000;
-      if(baths >= 2) estimate += 15000;
-      if(baths >= 3) estimate += 25000;
+      return adjustment;
+    }
 
-      if(condition === "needs-work") estimate *= 0.88;
-      if(condition === "good") estimate *= 1.03;
-      if(condition === "updated") estimate *= 1.08;
-      if(condition === "luxury") estimate *= 1.15;
+    async function generateAVM(){
+      const form = document.getElementById("valuationForm");
 
-      estimate = Math.round(estimate / 5000) * 5000;
+      if(!form.reportValidity()) return;
 
-      const low = Math.round((estimate * 0.92) / 5000) * 5000;
-      const high = Math.round((estimate * 1.08) / 5000) * 5000;
+      const address = document.getElementById("address").value.trim();
 
-      document.getElementById("mainValue").textContent = money(estimate);
-      document.getElementById("rangeValue").textContent = money(low) + " - " + money(high);
+      try{
+        const url = "https://api.rentcast.io/v1/avm/value?address=" + encodeURIComponent(address);
 
-      document.getElementById("estimatedValue").value = money(estimate);
-      document.getElementById("estimatedRange").value = money(low) + " - " + money(high);
+        const response = await fetch(url, {
+          method: "GET",
+          headers: {
+            "X-Api-Key": RENTCAST_API_KEY,
+            "accept": "application/json"
+          }
+        });
 
-      document.getElementById("resultBox").style.display = "block";
+        if(!response.ok){
+          throw new Error("AVM failed");
+        }
 
-      this.submit();
+        const data = await response.json();
 
-      alert("Thank you! Your instant estimate has been generated and sent to Chris for review.");
-    });
+        const baseValue =
+          data.price ||
+          data.value ||
+          data.estimatedValue ||
+          data.estimate ||
+          data.valuation ||
+          data.marketValue ||
+          0;
+
+        if(!baseValue){
+          throw new Error("No value returned");
+        }
+
+        const adjustment = getUpgradeAdjustment(baseValue);
+        const adjustedValue = Math.round((baseValue + adjustment) / 5000) * 5000;
+
+        const low = Math.round((adjustedValue * 0.94) / 5000) * 5000;
+        const high = Math.round((adjustedValue * 1.06) / 5000) * 5000;
+
+        document.getElementById("mainValue").textContent = money(adjustedValue);
+        document.getElementById("rangeValue").textContent = money(low) + " - " + money(high);
+
+        document.getElementById("baseAVM").value = money(baseValue);
+        document.getElementById("upgradeAdjustment").value = money(adjustment);
+        document.getElementById("estimatedValue").value = money(adjustedValue);
+        document.getElementById("estimatedRange").value = money(low) + " - " + money(high);
+
+        document.getElementById("resultBox").style.display = "block";
+        document.getElementById("resultBox").scrollIntoView({behavior:"smooth"});
+
+        setTimeout(() => {
+          form.submit();
+          alert("Thank you! Your automated value has been generated and sent to Chris for review.");
+        }, 700);
+
+      } catch(error){
+        alert("The automated value could not be generated for that address. Please check the address and try again, or Chris can review it manually.");
+      }
+    }
   </script>
 </body>
 </html>
