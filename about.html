@@ -335,6 +335,31 @@
       gap:20px;
     }
 
+    .sms-consent{
+  display:flex;
+  gap:12px;
+  background:#f4f8ff;
+  border:1px solid #d9e7f7;
+  border-radius:16px;
+  padding:14px;
+  margin:10px 0 16px;
+  font-size:13px;
+  line-height:1.5;
+  color:#405575;
+  font-weight:700;
+}
+
+.sms-consent input{
+  width:auto;
+  margin-top:4px;
+}
+
+.sms-consent a{
+  color:var(--blue);
+  font-weight:900;
+  text-decoration:underline;
+}
+
     @media(max-width:850px){
       .top,.nav,.footer{display:block}
       .links{flex-wrap:wrap;margin-top:16px}
@@ -411,6 +436,13 @@
     </div>
 
     <textarea name="Message" rows="5" placeholder="Message" required></textarea>
+
+    <label class="sms-consent">
+      <input type="checkbox" name="SMS Consent" value="Agreed" required>
+      <span>
+        I agree to be contacted by Chris Medeiros with eXp Realty | Slocum Home Team via call, email, and text for real estate services. To opt out, reply STOP at any time. Reply HELP for assistance. Message and data rates may apply. Message frequency may vary. Data will not be sold or shared with third parties for marketing or promotional purposes. View our <a href="privacy.html" target="_blank">Privacy Policy</a>.
+      </span>
+    </label>
 
     <input type="hidden" name="_subject" value="New Contact Form Lead - Website">
     <input type="hidden" name="_captcha" value="false">
