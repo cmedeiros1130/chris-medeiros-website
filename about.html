@@ -88,9 +88,7 @@
       align-items:start;
     }
 
-    .about-copy{
-      padding-top:16px;
-    }
+    .about-copy{padding-top:16px}
 
     .about-copy p{
       font-size:19px;
@@ -211,6 +209,31 @@
     .choice-group input{
       width:auto;
       margin:0;
+    }
+
+    .sms-consent{
+      display:flex;
+      gap:12px;
+      background:#f4f8ff;
+      border:1px solid #d9e7f7;
+      border-radius:16px;
+      padding:14px;
+      margin:10px 0 16px;
+      font-size:13px;
+      line-height:1.5;
+      color:#405575;
+      font-weight:700;
+    }
+
+    .sms-consent input{
+      width:auto;
+      margin-top:4px;
+    }
+
+    .sms-consent a{
+      color:var(--blue);
+      font-weight:900;
+      text-decoration:underline;
     }
 
     .btn{
@@ -335,30 +358,11 @@
       gap:20px;
     }
 
-    .sms-consent{
-  display:flex;
-  gap:12px;
-  background:#f4f8ff;
-  border:1px solid #d9e7f7;
-  border-radius:16px;
-  padding:14px;
-  margin:10px 0 16px;
-  font-size:13px;
-  line-height:1.5;
-  color:#405575;
-  font-weight:700;
-}
-
-.sms-consent input{
-  width:auto;
-  margin-top:4px;
-}
-
-.sms-consent a{
-  color:var(--blue);
-  font-weight:900;
-  text-decoration:underline;
-}
+    .footer a{
+      color:white;
+      text-decoration:underline;
+      font-weight:800;
+    }
 
     @media(max-width:850px){
       .top,.nav,.footer{display:block}
@@ -418,41 +422,41 @@
       <h3>Tell me what you're looking to do.</h3>
       <p class="contact-lead">Fill this out and I’ll get back to you as soon as possible.</p>
 
-<form class="form"
-      action="https://formsubmit.co/cmedeiros1130@gmail.com"
-      method="POST">
+      <form class="form"
+            action="https://formsubmit.co/cmedeiros1130@gmail.com"
+            method="POST">
 
-    <div class="input-row">
-        <input type="text" name="Name" placeholder="Name" required>
-        <input type="email" name="Email" placeholder="Email" required>
-    </div>
+        <div class="input-row">
+          <input type="text" name="Name" placeholder="Name" required>
+          <input type="email" name="Email" placeholder="Email" required>
+        </div>
 
-    <input type="text" name="Phone" placeholder="Phone" required>
+        <input type="text" name="Phone" placeholder="Phone" required>
 
-    <div class="choice-group">
-        <label><input type="radio" name="Interest" value="Looking to Buy" required><span>Looking to buy</span></label>
-        <label><input type="radio" name="Interest" value="Looking to Sell" required><span>Looking to sell</span></label>
-        <label><input type="radio" name="Interest" value="Just Curious" required><span>Just curious</span></label>
-    </div>
+        <div class="choice-group">
+          <label><input type="radio" name="Interest" value="Looking to Buy" required><span>Looking to buy</span></label>
+          <label><input type="radio" name="Interest" value="Looking to Sell" required><span>Looking to sell</span></label>
+          <label><input type="radio" name="Interest" value="Just Curious" required><span>Just curious</span></label>
+        </div>
 
-    <textarea name="Message" rows="5" placeholder="Message" required></textarea>
+        <textarea name="Message" rows="5" placeholder="Message" required></textarea>
 
-<label class="sms-consent">
-    <input type="checkbox" name="SMS Consent" value="Agreed">
+        <label class="sms-consent">
+          <input type="checkbox" name="SMS Consent" value="Agreed">
 
-    <span>
-        I agree to be contacted by <strong>Chris Medeiros with eXp Realty | Slocum Home Team</strong> via call, email, and text for real estate services. To opt out, you can reply <strong>STOP</strong> at any time or reply <strong>HELP</strong> for assistance. You can also click the unsubscribe link in emails. Message and data rates may apply. Message frequency may vary.
-       <a href="privacy.html" target="_blank" rel="noopener">View Privacy Policy</a>.
-    </span>
-</label>
+          <span>
+            I agree to be contacted by <strong>Chris Medeiros with eXp Realty | Slocum Home Team</strong> via call, email, and text for real estate services. To opt out, you can reply <strong>STOP</strong> at any time or reply <strong>HELP</strong> for assistance. You can also click the unsubscribe link in the emails. Message and data rates may apply. Message frequency may vary.
+            <a href="privacy.html" target="_blank" rel="noopener">View Privacy Policy</a>.
+          </span>
+        </label>
 
-    <input type="hidden" name="_subject" value="New Contact Form Lead - Website">
-    <input type="hidden" name="_captcha" value="false">
-    <input type="hidden" name="_template" value="table">
-    <input type="hidden" name="_next" value="https://cmedeiros1130.github.io/chris-medeiros-website/?submitted=true">
+        <input type="hidden" name="_subject" value="New Contact Form Lead - Website">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_next" value="https://cmedeiros1130.github.io/chris-medeiros-website/?submitted=true">
 
-    <button type="submit" class="btn">Submit Request</button>
-</form>
+        <button type="submit" class="btn">Submit Request</button>
+      </form>
 
       <div class="contact-info">
         <strong>Chris Medeiros</strong>
@@ -464,75 +468,73 @@
     </div>
   </section>
 
-<section id="sales" class="section">
-  <div class="eyebrow">Sales</div>
-  <h2>Sales Collage</h2>
-  <p>Click any property to view it directly on Zillow.</p>
+  <section id="sales" class="section">
+    <div class="eyebrow">Sales</div>
+    <h2>Sales Collage</h2>
+    <p>Click any property to view it directly on Zillow.</p>
 
-  <div class="sales-grid">
+    <div class="sales-grid">
+      <a class="sale-card" target="_blank" href="https://www.zillow.com/homedetails/137-Colonial-Ave-Cranston-RI-02910/65995654_zpid/">
+        <img src="https://photos.zillowstatic.com/fp/25426f31190d6e926b157b5c0e938cdb-cc_ft_960.jpg" alt="137 Colonial Ave Cranston RI">
+        <div class="sale-info"><strong>137 Colonial Ave</strong><span>Cranston, RI</span></div>
+      </a>
 
-    <a class="sale-card" target="_blank" href="https://www.zillow.com/homedetails/137-Colonial-Ave-Cranston-RI-02910/65995654_zpid/">
-      <img src="https://photos.zillowstatic.com/fp/25426f31190d6e926b157b5c0e938cdb-cc_ft_960.jpg" alt="137 Colonial Ave Cranston RI">
-      <div class="sale-info"><strong>137 Colonial Ave</strong><span>Cranston, RI</span></div>
-    </a>
+      <a class="sale-card" target="_blank" href="https://www.zillow.com/homedetails/12-Railroad-Row-Warwick-RI-02886/66047263_zpid/">
+        <img src="https://photos.zillowstatic.com/fp/bf401881b6d3177ab2783d48c29933a4-cc_ft_960.jpg" alt="12 Railroad Row Warwick RI">
+        <div class="sale-info"><strong>12 Railroad Row</strong><span>Warwick, RI</span></div>
+      </a>
 
-    <a class="sale-card" target="_blank" href="https://www.zillow.com/homedetails/12-Railroad-Row-Warwick-RI-02886/66047263_zpid/">
-      <img src="https://photos.zillowstatic.com/fp/bf401881b6d3177ab2783d48c29933a4-cc_ft_960.jpg" alt="12 Railroad Row Warwick RI">
-      <div class="sale-info"><strong>12 Railroad Row</strong><span>Warwick, RI</span></div>
-    </a>
+      <a class="sale-card" target="_blank" href="https://www.zillow.com/homedetails/259-Central-Ave-Johnston-RI-02919/65956077_zpid/">
+        <img src="https://photos.zillowstatic.com/fp/367dd664b1388a5f562890087ae0ea84-cc_ft_960.jpg" alt="259 Central Ave Johnston RI">
+        <div class="sale-info"><strong>259 Central Ave</strong><span>Johnston, RI</span></div>
+      </a>
 
-    <a class="sale-card" target="_blank" href="https://www.zillow.com/homedetails/259-Central-Ave-Johnston-RI-02919/65956077_zpid/">
-      <img src="https://photos.zillowstatic.com/fp/367dd664b1388a5f562890087ae0ea84-cc_ft_960.jpg" alt="259 Central Ave Johnston RI">
-      <div class="sale-info"><strong>259 Central Ave</strong><span>Johnston, RI</span></div>
-    </a>
+      <a class="sale-card" target="_blank" href="https://www.zillow.com/homedetails/52-Uncas-St-Warwick-RI-02889/65979706_zpid/">
+        <img src="https://photos.zillowstatic.com/fp/529aa21bccc40a7de48b8ebb58a2fa39-cc_ft_960.jpg" alt="52 Uncas St Warwick RI">
+        <div class="sale-info"><strong>52 Uncas St</strong><span>Warwick, RI</span></div>
+      </a>
 
-    <a class="sale-card" target="_blank" href="https://www.zillow.com/homedetails/52-Uncas-St-Warwick-RI-02889/65979706_zpid/">
-      <img src="https://photos.zillowstatic.com/fp/529aa21bccc40a7de48b8ebb58a2fa39-cc_ft_960.jpg" alt="52 Uncas St Warwick RI">
-      <div class="sale-info"><strong>52 Uncas St</strong><span>Warwick, RI</span></div>
-    </a>
+      <a class="sale-card" target="_blank" href="https://www.zillow.com/homedetails/58-Baltic-St-58-Attleboro-MA-02703/457569707_zpid/">
+        <img src="https://photos.zillowstatic.com/fp/051f1a25191795c94b73f6a253f6d775-cc_ft_960.jpg" alt="58 Baltic St Attleboro MA">
+        <div class="sale-info"><strong>58 Baltic St #58</strong><span>Attleboro, MA</span></div>
+      </a>
 
-    <a class="sale-card" target="_blank" href="https://www.zillow.com/homedetails/58-Baltic-St-58-Attleboro-MA-02703/457569707_zpid/">
-      <img src="https://photos.zillowstatic.com/fp/051f1a25191795c94b73f6a253f6d775-cc_ft_960.jpg" alt="58 Baltic St Attleboro MA">
-      <div class="sale-info"><strong>58 Baltic St #58</strong><span>Attleboro, MA</span></div>
-    </a>
+      <a class="sale-card" target="_blank" href="https://www.zillow.com/homedetails/1705-Wampanoag-Trl-Barrington-RI-02806/82693223_zpid/">
+        <img src="https://photos.zillowstatic.com/fp/661f8623c184aeb93126141eeafb9f1f-cc_ft_960.jpg" alt="1705 Wampanoag Trl Barrington RI">
+        <div class="sale-info"><strong>1705 Wampanoag Trl</strong><span>Barrington, RI</span></div>
+      </a>
 
-    <a class="sale-card" target="_blank" href="https://www.zillow.com/homedetails/1705-Wampanoag-Trl-Barrington-RI-02806/82693223_zpid/">
-      <img src="https://photos.zillowstatic.com/fp/661f8623c184aeb93126141eeafb9f1f-cc_ft_960.jpg" alt="1705 Wampanoag Trl Barrington RI">
-      <div class="sale-info"><strong>1705 Wampanoag Trl</strong><span>Barrington, RI</span></div>
-    </a>
+      <a class="sale-card" target="_blank" href="https://www.zillow.com/homedetails/85-Bay-View-Ave-1-Bristol-RI-02809/460173356_zpid/">
+        <img src="https://photos.zillowstatic.com/fp/ffa86f8564caf59d962a9160711fe701-cc_ft_960.jpg" alt="85 Bay View Ave Bristol RI">
+        <div class="sale-info"><strong>85 Bay View Ave #1</strong><span>Bristol, RI</span></div>
+      </a>
 
-    <a class="sale-card" target="_blank" href="https://www.zillow.com/homedetails/85-Bay-View-Ave-1-Bristol-RI-02809/460173356_zpid/">
-      <img src="https://photos.zillowstatic.com/fp/ffa86f8564caf59d962a9160711fe701-cc_ft_960.jpg" alt="85 Bay View Ave Bristol RI">
-      <div class="sale-info"><strong>85 Bay View Ave #1</strong><span>Bristol, RI</span></div>
-    </a>
+      <a class="sale-card" target="_blank" href="https://www.zillow.com/homedetails/1017-Tiogue-Ave-Coventry-RI-02816/66074142_zpid/">
+        <img src="https://photos.zillowstatic.com/fp/4180d2b74742f53fd17212deffbe2811-cc_ft_960.jpg" alt="1017 Tiogue Ave Coventry RI">
+        <div class="sale-info"><strong>1017 Tiogue Ave</strong><span>Coventry, RI</span></div>
+      </a>
 
-    <a class="sale-card" target="_blank" href="https://www.zillow.com/homedetails/1017-Tiogue-Ave-Coventry-RI-02816/66074142_zpid/">
-      <img src="https://photos.zillowstatic.com/fp/4180d2b74742f53fd17212deffbe2811-cc_ft_960.jpg" alt="1017 Tiogue Ave Coventry RI">
-      <div class="sale-info"><strong>1017 Tiogue Ave</strong><span>Coventry, RI</span></div>
-    </a>
+      <a class="sale-card" target="_blank" href="https://www.zillow.com/homedetails/36-Roosevelt-Dr-Bristol-RI-02809/65998473_zpid/">
+        <img src="https://photos.zillowstatic.com/fp/afffda7fe420227261eb0694e7870086-cc_ft_960.jpg" alt="36 Roosevelt Dr Bristol RI">
+        <div class="sale-info"><strong>36 Roosevelt Dr</strong><span>Bristol, RI</span></div>
+      </a>
 
-    <a class="sale-card" target="_blank" href="https://www.zillow.com/homedetails/36-Roosevelt-Dr-Bristol-RI-02809/65998473_zpid/">
-      <img src="https://photos.zillowstatic.com/fp/afffda7fe420227261eb0694e7870086-cc_ft_960.jpg" alt="36 Roosevelt Dr Bristol RI">
-      <div class="sale-info"><strong>36 Roosevelt Dr</strong><span>Bristol, RI</span></div>
-    </a>
+      <a class="sale-card" target="_blank" href="https://www.zillow.com/homedetails/21-Parsonage-Dr-Warwick-RI-02889/65822143_zpid/">
+        <img src="https://photos.zillowstatic.com/fp/3d89acce82a5574eb41ce20cc774e28d-cc_ft_960.jpg" alt="21 Parsonage Dr Warwick RI">
+        <div class="sale-info"><strong>21 Parsonage Dr</strong><span>Warwick, RI</span></div>
+      </a>
 
-    <a class="sale-card" target="_blank" href="https://www.zillow.com/homedetails/21-Parsonage-Dr-Warwick-RI-02889/65822143_zpid/">
-      <img src="https://photos.zillowstatic.com/fp/3d89acce82a5574eb41ce20cc774e28d-cc_ft_960.jpg" alt="21 Parsonage Dr Warwick RI">
-      <div class="sale-info"><strong>21 Parsonage Dr</strong><span>Warwick, RI</span></div>
-    </a>
+      <a class="sale-card" target="_blank" href="https://www.zillow.com/homedetails/28-Baron-Rd-Barrington-RI-02806/82696145_zpid/">
+        <img src="https://photos.zillowstatic.com/fp/83f2959e4c05bdda83fb2bf8175de473-cc_ft_960.jpg" alt="28 Baron Rd Barrington RI">
+        <div class="sale-info"><strong>28 Baron Rd</strong><span>Barrington, RI</span></div>
+      </a>
 
-    <a class="sale-card" target="_blank" href="https://www.zillow.com/homedetails/28-Baron-Rd-Barrington-RI-02806/82696145_zpid/">
-      <img src="https://photos.zillowstatic.com/fp/83f2959e4c05bdda83fb2bf8175de473-cc_ft_960.jpg" alt="28 Baron Rd Barrington RI">
-      <div class="sale-info"><strong>28 Baron Rd</strong><span>Barrington, RI</span></div>
-    </a>
-
-    <a class="sale-card" target="_blank" href="https://www.zillow.com/homedetails/129-1st-Ave-Cranston-RI-02910/458916273_zpid/">
-      <img src="https://photos.zillowstatic.com/fp/5e17ece4b4cff393563f1e6702eb31ba-cc_ft_960.jpg" alt="129 1st Ave Cranston RI">
-      <div class="sale-info"><strong>129 1st Ave</strong><span>Cranston, RI</span></div>
-    </a>
-
-  </div>
-</section>
+      <a class="sale-card" target="_blank" href="https://www.zillow.com/homedetails/129-1st-Ave-Cranston-RI-02910/458916273_zpid/">
+        <img src="https://photos.zillowstatic.com/fp/5e17ece4b4cff393563f1e6702eb31ba-cc_ft_960.jpg" alt="129 1st Ave Cranston RI">
+        <div class="sale-info"><strong>129 1st Ave</strong><span>Cranston, RI</span></div>
+      </a>
+    </div>
+  </section>
 
   <section class="section light">
     <div class="eyebrow">Reviews</div>
@@ -580,8 +582,10 @@
     <div>
       <strong>Chris Medeiros</strong><br>
       eXp Realty | Slocum Home Team<br>
-      4372 Post Rd, Warwick, RI 02818
+      4372 Post Rd, Warwick, RI 02818<br><br>
+      <a href="privacy.html">Privacy Policy</a>
     </div>
+
     <div>
       401-235-4396<br>
       Chrism@slocumhometeam.com
@@ -589,12 +593,12 @@
   </footer>
 
   <script>
-const params = new URLSearchParams(window.location.search);
+    const params = new URLSearchParams(window.location.search);
 
-if (params.get("submitted") === "true") {
-    alert("Thank you for your submission! Chris will contact you shortly.");
-    window.history.replaceState({}, document.title, window.location.pathname);
-}
-</script>
+    if (params.get("submitted") === "true") {
+      alert("Thank you for your submission! Chris will contact you shortly.");
+      window.history.replaceState({}, document.title, window.location.pathname);
+    }
+  </script>
 </body>
 </html>
